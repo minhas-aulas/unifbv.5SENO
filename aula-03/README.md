@@ -9,7 +9,7 @@
 ### Start XSS Rails
 
 - cd xss-rails
-- docker build -t xss-php .
+- docker build -t xss-rails .
 - docker run -d -p 3000:3000 xss-rails
 
 ### Start Space Invaders
@@ -18,12 +18,18 @@
 - docker build -t space-invaders .
 - docker run -d -p 8081:80 space-invaders
 
+### XSS change bg color
+
+<script>
+  document.body.style.backgroundColor = "red";
+</script>
+
 ### XSS inject iframe
 
 <script>
   var iframe    = document.createElement('iframe');
   iframe.src    = 'http://127.0.0.1:8000';
-  iframe.width  = '800'; 
+  iframe.width  = '800';
   iframe.height = '585';
   document.body.appendChild(iframe);
 </script>
