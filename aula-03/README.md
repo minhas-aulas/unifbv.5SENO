@@ -12,6 +12,11 @@
 - docker build -t xss-rails .
 - docker run -d -p 3000:3000 xss-rails
 
+### Start XSS Wordpress
+
+- cd xss-wordpress
+- docker-compose up
+
 ### Start Space Invaders
 
 - cd space-invaders
