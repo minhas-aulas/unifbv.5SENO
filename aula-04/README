@@ -1,0 +1,13 @@
+### Comando docker para levantar o kalilinux
+
+$ docker run -it --name kalilinux --network=host fabiosantos/kalilinux
+
+### Comando docker para levantar mysql
+
+$ cd aula-04
+$ docker-compose up -d
+
+### Requirements
+
+- Docker instalado
+- docker-compose instalado
