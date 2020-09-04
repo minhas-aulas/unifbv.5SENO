@@ -1,5 +1,5 @@
-FROM nginx
+FROM nginx:alpine
 
-COPY nginx/nginx.conf /etc/nginx/nginx.conf
-COPY nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY . /usr/share/nginx/html
+COPY ./mywebsite/nginx/nginx.conf /etc/nginx/nginx.conf
+COPY ./mywebsite/nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY ./mywebsite/html /usr/share/nginx/html

@@ -6,6 +6,14 @@
 - docker build -t xss-php .
 - docker run -d -p 8080:80 xss-php
 
+<script>
+  alert(1)
+</script>
+
+<script>
+  document.body.style.backgroundColor = "red";
+</script>
+
 ### Start XSS Rails
 
 - cd xss-rails
@@ -25,15 +33,11 @@
 
 ### XSS change bg color
 
-<script>
-  document.body.style.backgroundColor = "red";
-</script>
-
 ### XSS inject iframe
 
 <script>
   var iframe    = document.createElement('iframe');
-  iframe.src    = 'http://127.0.0.1:8000';
+  iframe.src    = 'http://127.0.0.1:8081';
   iframe.width  = '800';
   iframe.height = '585';
   document.body.appendChild(iframe);

@@ -20,6 +20,24 @@
     </nav>
 
     <div class="container">
+
+      <?php
+        if ( isset($_POST["content"]) )
+        {
+          echo $_POST["content"];
+        }
+
+        if ( isset($_POST["email"]) )
+        {
+          setcookie("email", $_POST["email"], time()+2*24*60*60);
+        }
+
+        if ( isset($_POST["pwd"]) )
+        {
+          setcookie("pwd", $_POST["pwd"], time()+2*24*60*60);
+        }
+      ?>
+      
       <h1> Meu Formulário </h1>
 
       <form action="/" method="POST">
@@ -38,23 +56,5 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
-
-    <?php
-      if ( isset($_POST["content"]) )
-      {
-        echo $_POST["content"];
-      }
-
-      if ( isset($_POST["email"]) )
-      {
-        setcookie("email", $_POST["email"], time()+2*24*60*60);
-      }
-
-      if ( isset($_POST["pwd"]) )
-      {
-        setcookie("pwd", $_POST["pwd"], time()+2*24*60*60);
-      }
-    ?>
-
   </body>
 </html>

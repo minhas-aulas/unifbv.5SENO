@@ -1,4 +1,4 @@
-FROM ruby:2.5
+FROM ruby:2.5.5
 
 RUN apt-get update && apt-get install -y nodejs
 # RUN apt-get update -qq && apt-get install -y postgresql-client
