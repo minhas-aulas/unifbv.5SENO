@@ -2,10 +2,10 @@
 
 $ docker run -it --name kalilinux --network=host fabiosantos/kalilinux
 
-### Comando docker para levantar mysql
+### Comando docker para levantar Wordpress e Mysql
 
 $ cd aula-04
-$ docker-compose up -d
+$ docker-compose up --build
 
 ### Requirements
 
